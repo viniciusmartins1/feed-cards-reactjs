@@ -24,14 +24,13 @@ export function Post({ author, content, publishedAt }) {
     addSuffix: true,
   });
 
-  function handleCreateNewComment() {
+  function handleCreateNewComment(event) {
     event.preventDefault();
     setComments([...comments, newCommentText]);
     setNewCommentText("");
   }
 
-  function handleNewCommentChange() {
-    event.target.setCustomValid("");
+  function handleNewCommentChange(event) {
     setNewCommentText(event.target.value);
   }
 
